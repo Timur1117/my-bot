@@ -1,4 +1,6 @@
-import os, threading, http.server, socketserver; threading.Thread(target=lambda: socketserver.TCPServer(("", int(os.environ.get("PORT", 10000))), http.server.SimpleHTTPRequestHandler).serve_forever(), daemon=True).start()
+import os, threading, http.server, socketserver
+threading.Thread(target=lambda: socketserver.TCPServer(("", int(os.environ.get("PORT", 10000))), http.server.SimpleHTTPRequestHandler).serve_forever(), daemon=True).start()
+
 # -*- coding: utf-8 -*-
 """
 Telegram-бот для скачивания видео/аудио по ссылке.
